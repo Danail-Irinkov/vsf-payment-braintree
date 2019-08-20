@@ -43,7 +43,7 @@ export default {
             currency: this.getTransactions().amount.currency
           }
         }).then((dropinInstance) => {
-          button.addEventListener('click', function () {
+          button.addEventListener('click', () => {
             if (dropinInstance.isPaymentMethodRequestable()) {
               setTimeout(() => {
                 dropinInstance.requestPaymentMethod((err, payload) => {
